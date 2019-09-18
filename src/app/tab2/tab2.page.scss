@@ -1,1 +1,10 @@
 
+div
+{
+    padding: 0.5em;
+}
+
+div > *
+{
+    width: 100%;
+}

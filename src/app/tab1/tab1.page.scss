@@ -1,4 +1,10 @@
-.welcome-card img {
-  max-height: 35vh;
-  overflow: hidden;
+
+div
+{
+    padding: 0.5em;
+}
+
+div > *
+{
+    width: 100%;
 }

@@ -1,9 +1,23 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="tertiary">
     <ion-title>
-      Tab Two
+      eunoia
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <div class="navbar text-center">
+    <div style="margin: 0 auto">
+      <h4>sentiment stream</h4>
+      <h6 class="font-italic">support well minds and beautiful thinking</h6>
+    </div>
+  </div>
+  <div class="container">
+      <div class="col-12">
+        <canvas baseChart [datasets]="graphData" [labels]="graphLabels" [options]="graphOptions"
+          [legend]="graphLegend" [chartType]="graphType">
+        </canvas>
+      </div>
+  </div>
+</ion-content>
