@@ -29,6 +29,16 @@ export class MessageService {
   getGraphDataAndLabels(messages: Message[]) {
     let labels = [0,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5];
     let data = [];
+    let options = {
+      scales: {
+          yAxes: [{
+              ticks: {
+                  min: 0,
+                  stepSize: 1
+              }
+          }]
+      }
+  };
     for (let i = 0; i < labels.length-1; i++) {
       data.push(messages.filter(message => (message.score >= labels[i] && message.score < labels[i+1])).length)
     }
@@ -36,9 +46,10 @@ export class MessageService {
     return {
       graphData: [{
         data: data,
-        label: "happiness levels"
+        label: "happiness levels",
       }],
-      graphLabels: labels
+      graphLabels: labels,
+      options: options // not showing
     }
   }
 
